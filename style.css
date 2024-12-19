@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Varela+Round&display=swap');
+
+:root {
+    --Backgrdcolor: rgb(35, 34, 34);
+    --headtxtcolor: rgb(212, 212, 96);
+    --navcolor: rgb(79, 71, 71);
+    --textcolor: rgb(255, 255, 255);
+    --hovercolor: rgb(0, 0, 0);
+}
+
+body {
+    background-color: var(--Backgrdcolor);
+    font-size: 1.5rem;
+    color: rgb(252, 251, 251);
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    background-color: var(--navcolor);
+    list-style-type: none;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+
+    overflow: hidden;
+    width: 100%;
+    position: sticky;
+    z-index: 1;
+}
+
+li {
+    font-family: "Varela Round", serif;
+    border: 2px;
+    margin: 0px 1vw;
+    float: left;
+
+}
+
+li a {
+    display: flex;
+    background-color: var(--navcolor);
+    color: var(--textcolor);
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid var(--bordercolor);
+    margin: 0px;
+}
+
+li:last-child {
+    border-left: 1px solid var(--bordercolor);
+    float: right;
+}
+
+li a:hover {
+    background-color: var(--hovercolor);
+    border-radius: 1.5vh;
+}
+
+h1 {
+    font-family: Agu Display;
+    color: var(--headtxtcolor);
+
+}
+
+main {
+    width: 30vw;
+    margin: 5vw;
+}
+
+h1>svg {
+    width: 5vw;
+    fill: var(--headtxtcolor);
+}
+
+.timer {
+    text-align: left;
+    margin: 0px 10vw;
+
+}
+
+.btns {
+    margin: 0px 10vw;
+}
+
+button:hover {
+    background-color: #979c98;
+}
+
+button {
+    background-color: #757b76;
+    border: 0;
+    color: rgba(31, 0, 0, 0.5);
+    padding: 1vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#About {
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    border: 2px solid;
+    top: 80vh;
+    right: 0px;
+    font-family: "Varela Round", serif;
+
+}
+
+#words1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2vh 8vw;
+
+}
+
+.word {
+    font-size: 170%;
+    margin: 0.5vw;
+    font-family: "Varela Round", serif;
+}
+
+.lettercorrect {
+    color: #a4fb75;
+}
+
+.letterincorrect {
+    color: rgb(206, 70, 70);
+}
+
+.blinking-cursor {
+    font-size: 200%;
+    position: fixed;
+    top: 49.3vh;
+    left: 9vw;
+    color: rgb(255, 220, 43);
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
